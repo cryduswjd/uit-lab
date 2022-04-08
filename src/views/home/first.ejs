@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!--필수 : 로그인, 사진첩, 스케줄 관리 달력-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b619a30116.js" crossorigin="anonymous"></script>
+    <title>First Page</title>
+
+    <style>
+        a:link { color: black; text-decoration: none;}  /* link -> 클릭하지 않은 링크 */
+        a:visited { color: black; text-decoration: none;} /* visited -> 한번 클릭했던 혹은 다녀갔던 링크 */
+        a:hover { color: black; text-decoration: underline;} /* hover -> 링크를 클릭하려고 마우스를 가져갔을 때 */ /* decoration -> 밑줄 */
+
+        .logo_text {
+            position: relative;
+            left: 90px;
+            margin-right: 90%;
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #5B5150;
+            color:antiquewhite;
+            size: 100px;
+            font-weight: 600;
+        }
+
+        .search{
+            position: absolute;
+            left: 1250px;
+            top: 35px;
+            width: 30%;
+        }
+
+        .input{
+            width: 100%;
+            border: 1px solid #8e8e8e;
+            padding: 12px 14px;
+            font-size: 14px;
+        }
+
+        .search_image{
+            position: absolute;
+            top: 22px;
+            left: 1225px;
+        }
+
+        .list_image{
+            position: absolute;
+            top: 22px;
+            left: 1450px;
+        }
+
+        .login_image{
+            position: absolute;
+            top: 22px;
+            left: 1500px;
+
+        }
+
+        .lab_introduction_text{
+            position: absolute;
+            top: 120px;
+            left: 1050px;
+        }
+
+        .lab_member_text{
+            position: absolute;
+            top: 120px;
+            left: 1250px;
+        }
+
+        .project_text{
+            position: absolute;
+            top: 120px;
+            left: 1450px;
+        }
+
+        .app_image{
+            position: absolute;
+            top: 300px;
+            left: 350px;
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            background-color:#e2b091;
+        }
+        .app_image  p {
+            line-height: 1.5;
+            vertical-align: middle;
+        }
+        
+        .web_image{
+            position: absolute;
+            top: 300px;
+            left:750px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+
+        .web_image > div{
+            position: absolute;
+            top: 500px;
+            left:750px;
+        }
+
+        .server_image{
+            position: absolute;
+            top: 300px;
+            left:1200px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: #eabcac
+        }
+
+        .shape1{
+            position: absolute;
+            width: 12px;
+            height: 30px;
+            top: 750px;
+            left: 250px;
+            background-color: #5B5150;
+        }
+
+        .announcement{
+            position: absolute;
+            top: 753px;
+            left: 280px;
+            font-size: large;
+        }
+
+        .announcement_table{
+            position: absolute;
+            top: 805px;
+            left: 280px;
+            color: #5B5150;
+            width: 450px;
+            height: 200px;
+        }
+
+        .shape2{
+            position: absolute;
+            width: 12px;
+            height: 30px;
+            top: 750px;
+            left: 900px;
+            background-color: #5B5150;
+        }
+
+        .month{
+            position: absolute;
+            top: 753px;
+            left: 930px;
+            font-size: large;
+        }
+
+        .month_table{
+            position: absolute;
+            top: 805px;
+            left: 930px;
+            width: 550px;
+            height: 450px;
+            border: 1px solid gray;
+            color: #5B5150;
+        }
+
+        .footer {
+            position: absolute;
+            top: 1300px;
+            bottom: 0;
+            width: 100%;
+            height: 15%;
+            text-align: right;
+            color: #53565a;
+            background-color: lightgray;
+        }
+
+    </style>
+
+</head>
+<body>
+    <a href="/first" class="logo_text" style="text-decoration: none; color:antiquewhite;">UIT-LAB</a>
+    <p class="search_image">
+        <span style="color:gray"><i class="fa-solid fa-magnifying-glass"></i>
+    </p>
+    <div class="search">
+        <input type="text" placeholder=" 검색어를 입력하세요">
+    </div>
+    <p class="list_image">
+        <span style="color:gray"><i class="fa-solid fa-list-ul"></i>
+    </p>
+    <p class="login_image">
+        <span style="color:gray"><i onclick="location.href='/login'" class="fa-solid fa-user"></i>
+    </p>
+    <a href="/introduction" class="lab_introduction_text" style="text-decoration: none;">랩실소개</a>
+    <a href="/second" class="lab_member_text" style="text-decoration:none">사진첩</a>
+    <a href="/project" class="project_text" style="text-decoration:none">프로젝트</a>
+    <p class="app_image">
+        <span style="color:#5B5150"><i class="fa-solid fa-mobile-screen-button fa-10x"></i>
+    </p>
+    <p class="web_image">
+        <span style="color:#5B5150"><i class="fa-solid fa-window-restore fa-10x"></i>
+        
+    </p>
+    <p class="server_image">
+        <span style="color:#5B5150"><i class="fa-solid fa-desktop fa-10x"></i>
+    </p>
+
+    <div class="shape1"></div>
+    <a href="/announcement" class="announcement" style="text-decoration:none;">공지사항</a>
+    <table class="announcement_table" >
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>날짜</th>
+            </tr><tr><th></th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>매주 월요일 13시 30분 세미나</td>
+                <td>2022.01.27</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2주차 ppt</td>
+                <td>2022.02.17</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>랩실 휴가 2022.2/22 ~ 2022.3/1</td>
+                <td>2022.02.21</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <div class="shape2"></div><div class="month">월간계획</div>
+    <table class="month_table">
+        <thead>
+            <tr>
+                <th>일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>
+            위치: 호서대학교 아산캠퍼스 2공학관 421호
+            <br>전화번호 : 041-1234-5678</br>
+            <br>이메일 : email@hoseo.edu</br>
+        </p>
+    </div>
+    
+</body>
+</html> 
